@@ -1,0 +1,2 @@
+ALTER TABLE files DROP CONSTRAINT IF EXISTS files_size_check;
+ALTER TABLE blobs DROP CONSTRAINT IF EXISTS blobs_size_check;

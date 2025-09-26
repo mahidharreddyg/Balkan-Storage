@@ -1,0 +1,2 @@
+ALTER TABLE folders
+ADD COLUMN parent_id BIGINT REFERENCES folders(id) ON DELETE CASCADE;

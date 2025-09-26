@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS file_permissions (
+  id BIGSERIAL PRIMARY KEY,
+  file_id BIGINT REFERENCES files(id) ON DELETE CASCADE,
+  user_id BIGINT REFERENCES users(id) ON DELETE CASCADE,
+  can_edit BOOLEAN DEFAULT false,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+ALTER TABLE shares
+ADD COLUMN IF NOT EXISTS allow_download BOOLEAN DEFAULT false;

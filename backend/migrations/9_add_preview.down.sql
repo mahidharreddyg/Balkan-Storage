@@ -1,0 +1,1 @@
+ALTER TABLE files DROP COLUMN preview_available;
